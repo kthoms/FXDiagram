@@ -44,7 +44,7 @@ class StatemachineDiagramConfig extends AbstractXtextDiagramConfig {
 	val statemachineDiagram = new DiagramMapping<Statemachine>(this, 'statemachineDiagram', 'Statemachine') {
 		override calls() {
 			// when adding a statemachine diagram automatically add a node for each state
-			// and a connetion for each transition
+			// and a connection for each transition
 			stateNode.nodeForEach[states]
 			transitionConnection.connectionForEach[states.map[transitions].flatten]
 		}		
